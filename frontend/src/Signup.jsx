@@ -16,7 +16,7 @@ export default function Signup(){
         async function verifyToken(){
            
             try{
-                     const res=await fetch("http://localhost:3000/verify",{
+                     const res=await fetch("https://todox-api-buxf.onrender.com/verify",{
                      method:"GET",
                      headers:{
                              token:localStorage.getItem("token") 
@@ -35,7 +35,7 @@ export default function Signup(){
                             navigate("/") ;
                         }
 
-                        console.log(data) ;
+                        
             }
             catch(e){
                 console.log(e) ;
@@ -66,7 +66,7 @@ export default function Signup(){
         e.preventDefault() ;
 
        try{
-         const res=await fetch("http://localhost:3000/signup",{
+         const res=await fetch("https://todox-api-buxf.onrender.com/signup",{
             method:"POST",
              headers: {
                 "Content-Type": "application/json"

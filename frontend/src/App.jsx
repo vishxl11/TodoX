@@ -47,7 +47,7 @@ function Todos() {
           async function verifyToken(){
              
               try{
-                       const res=await fetch("http://localhost:3000/verify",{
+                       const res=await fetch("https://todox-api-buxf.onrender.com/verify",{
                        method:"GET",
                        headers:{
                                token:localStorage.getItem("token") 
@@ -65,7 +65,7 @@ function Todos() {
                           if(data.authenticated)
                           {   
                               
-                             const res1=await fetch("http://localhost:3000/todos",{
+                             const res1=await fetch("https://todox-api-buxf.onrender.com/todos",{
                               method:"GET",
                               headers:{
                                 token:localStorage.getItem("token")
@@ -96,7 +96,7 @@ function Todos() {
       },[])
 
       async function fetchTodo(){
-              const res1=await fetch("http://localhost:3000/todos",{
+              const res1=await fetch("https://todox-api-buxf.onrender.com/todos",{
                               method:"GET",
                               headers:{
                                 token:localStorage.getItem("token")
@@ -130,7 +130,7 @@ function Todos() {
 
    
 
-                    await  fetch("http://localhost:3000/todo", {
+                    await  fetch("https://todox-api-buxf.onrender.com/todo", {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json",
@@ -149,7 +149,7 @@ function Todos() {
   }
 
  async function todoToggle(index){
-    await fetch(`http://localhost:3000/todo/${todos[index]._id}`,{
+    await fetch(`https://todox-api-buxf.onrender.com/todo/${todos[index]._id}`,{
     method:"PUT",
     headers:{
        "Content-Type": "application/json",
@@ -167,7 +167,7 @@ function Todos() {
   
 async function todoDelete(id){
 
-      await fetch(`http://localhost:3000/todos/${id}`,{
+      await fetch(`https://todox-api-buxf.onrender.com/todos/${id}`,{
         method:"DELETE",
         headers:{
           token:localStorage.getItem("token")
@@ -189,7 +189,7 @@ async function saveEdit(index){
     return;
   }
 
-  await fetch(`http://localhost:3000/todo/${todos[index]._id}`,{
+  await fetch(`https://todox-api-buxf.onrender.com/todo/${todos[index]._id}`,{
     method:"PUT",
     headers:{
        "Content-Type": "application/json",

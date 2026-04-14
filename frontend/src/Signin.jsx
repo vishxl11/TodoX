@@ -14,7 +14,7 @@ export default function Signin(){
         async function verifyToken(){
            
             try{
-                     const res=await fetch("http://localhost:3000/verify",{
+                     const res=await fetch("https://todox-api-buxf.onrender.com/verify",{
                      method:"GET",
                      headers:{
                              token:localStorage.getItem("token") 
@@ -33,7 +33,7 @@ export default function Signin(){
                             navigate("/") ;
                         }
 
-                        console.log(data) ;
+                        
             }
             catch(e){
                 console.log(e) ;
@@ -64,7 +64,7 @@ export default function Signin(){
 
         try{
 
-            const res=await fetch("http://localhost:3000/signin",{
+            const res=await fetch("https://todox-api-buxf.onrender.com/signin",{
                 method:"POST",
                 headers: {
                 "Content-Type": "application/json"
@@ -79,7 +79,7 @@ export default function Signin(){
                 toast.success("signed in successfully") ;
                 localStorage.setItem("token",data.token) ;
                 navigate("/") ;
-                console.log(data) ;
+               
             }
             else
             {
@@ -88,7 +88,7 @@ export default function Signin(){
 
         }
         catch(err){
-            toast.error("sometihng went wrong nigga") ;
+            toast.error("sometihng went wrong") ;
 
         }
     }
