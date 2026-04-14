@@ -1,0 +1,223 @@
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+.parentDiv{
+  margin-top:2rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background-color:rgba(13,13,13,1);
+  height:100%;
+  width:100%;
+}
+
+.header{
+  display:flex;
+  border:2px solid rgba(43,43,41);
+  border-radius:20px;
+  width:30rem;
+  padding:25px;
+  justify-content:space-evenly;
+}
+
+.todoText{
+  color:rgba(205,191,166);
+  overflow-wrap: break-word; 
+}
+
+.circle{
+  width:8rem;
+  height:8rem;
+  background-color:rgba(255,87,48);
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:40px;
+  font-weight:700;
+  color:black;
+  
+
+}
+
+.inputBox{
+  margin-top:2rem;
+  
+}
+
+.taskIcons{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-left:auto;
+  cursor:pointer;
+  color: rgba(205,191,166);
+ 
+}
+
+.todoDiv{
+  display:flex;
+  width: 30rem;
+  justify-content: space-between;
+  align-items: center;
+  border:2px solid rgba(43,43,41) ;
+  border-radius: 15px;
+  padding: 10px 18px;
+  margin-top: 22px; 
+   background-color: rgba(30,30,30);;
+
+}
+
+.deleteBtn{
+  margin-left:10px;
+  height:20px;
+  align-self:center;
+  background-color:rgba(255,87,48);
+}
+
+.inputBox{
+  background-color: rgba(30,30,30);
+  width: 25rem;
+  height: 3rem;
+  border-radius: 12px;
+  border: 1px black solid;
+  font-size: 20px;
+  margin-top: 2rem;
+  padding-left: 1rem;
+ 
+  color: rgba(205,191,166);
+}
+
+.searchSection{
+  display: flex; 
+  width: 30rem;
+  justify-content: space-between;
+}
+
+.addTodoSign{
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: rgba(255,87,48);
+  cursor: pointer;
+  
+}
+
+.checkbox{
+  display: block;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.9rem;
+  accent-color: rgba(255,87,48);
+}
+
+.deleteIcon{
+  font-size: 1.5rem;
+}
+
+.editIcon{
+  font-size: 1.5rem;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: rgba(13,13,13,1);
+}
+
+.header{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoDiv{
+  transition: all 0.2s ease;
+}
+
+.todoDiv:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,87,48,0.5);
+}
+
+.inputBox{
+  outline: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.2s ease;
+}
+
+.inputBox:focus{
+  border: 1px solid rgba(255,87,48,0.7);
+  box-shadow: 0 0 8px rgba(255,87,48,0.3);
+}
+
+.addTodoSign{
+  transition: all 0.2s ease;
+}
+
+.addTodoSign:hover{
+  transform: scale(1.1);
+  color: rgba(255,120,80);
+}
+
+.addTodoSign:active{
+  transform: scale(0.95);
+}
+
+.taskIcons svg{
+  transition: all 0.2s ease;
+}
+
+.taskIcons svg:hover{
+  color: rgba(255,87,48);
+  transform: scale(1.2);
+}
+
+.checkbox{
+  transition: all 0.2s ease;
+}
+
+.checkbox:hover{
+  transform: scale(1.1);
+}
+
+.todoText{
+  transition: all 0.2s ease;
+}
+
+.editInput{
+  border:none;
+  outline:none;
+  background:transparent;
+
+  color: rgba(205,191,166);   /* same as todoText */
+  font-size: 1.2rem;          /* match your h3 */
+  font-weight: inherit;
+  font-family: inherit;
+
+  width:100%;
+}
+
+
+
+
+
+.editInput:focus{
+  border-bottom:2px solid rgba(255,87,48);
+}
+
+
+.LoadingDiv{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
