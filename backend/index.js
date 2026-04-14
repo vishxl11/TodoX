@@ -124,7 +124,7 @@ app.post("/todo",auth,async function(req,res){
 
     res.json(
         {
-            message:"done nigga"
+            message:"done"
         }
     )
 
